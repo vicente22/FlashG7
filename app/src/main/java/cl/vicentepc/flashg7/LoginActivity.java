@@ -2,9 +2,12 @@ package cl.vicentepc.flashg7;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 
 import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 import java.util.Arrays;
 
@@ -36,8 +39,11 @@ public class LoginActivity extends AppCompatActivity {
                         .createSignInIntentBuilder()
                         .setAvailableProviders(Arrays.asList(
                                 new AuthUI.IdpConfig.EmailBuilder().build(),
-                                //new AuthUI.IdpConfig.FacebookBuilder().build(),
-                                new AuthUI.IdpConfig.GoogleBuilder().build()))
+                                new AuthUI.IdpConfig.GoogleBuilder().build(),
+                                new AuthUI.IdpConfig.FacebookBuilder().build(),
+                                new AuthUI.IdpConfig.TwitterBuilder().build()))
+                        .setTheme(R.style.LoginTheme)
+                        .setLogo(R.mipmap.logo)
                         .setIsSmartLockEnabled(false)
                         .build(),
                 RC_SIGN_IN);

@@ -19,7 +19,15 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        android:background="@drawable/side_nav_bar"
+        app:headerLayout="@layout/nav_header_main">
+
+        <fragment
+            android:id="@+id/drawableFragment"
+            android:name="cl.vicentepc.flashg7.DrawerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>

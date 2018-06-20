@@ -11,4 +11,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="facebook_application_id" translatable="false">1688794041188821</string>
+
+    <string name="twitter_consumer_key" translatable="false">Hqb80YbEKbG97j58Y1QyqeMIo</string>
+    <string name="twitter_consumer_secret" translatable="false">bDQdRfsXFvXFTFUSCcn99O72tLXOJ7UAckEGdn3aZ5LKSR6cmy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
