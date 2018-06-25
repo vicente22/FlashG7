@@ -1,4 +1,4 @@
-package cl.vicentepc.flashg7;
+package cl.vicentepc.flashg7.views.main;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import cl.vicentepc.flashg7.R;
 
 public class MainActivity extends AppCompatActivity {
 

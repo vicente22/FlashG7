@@ -24,7 +24,7 @@
 
         <fragment
             android:id="@+id/drawableFragment"
-            android:name="cl.vicentepc.flashg7.DrawerFragment"
+            android:name="cl.vicentepc.flashg7.views.main.drawer.DrawerFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
