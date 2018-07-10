@@ -7,6 +7,7 @@ public class PhotoPreference {
 
     private static final String GROUP_PHOTO = "cl.vicentepc.flashg7.data.GROUP_KEY";
     private static final String KEY_PHOTO = "cl.vicentepc.flashg7.data.KEY_PHOTO";
+
     private Context context;
 
     public PhotoPreference(Context context) {

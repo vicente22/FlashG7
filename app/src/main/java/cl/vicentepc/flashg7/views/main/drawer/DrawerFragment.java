@@ -28,6 +28,8 @@ import cl.vicentepc.flashg7.R;
 import cl.vicentepc.flashg7.data.CurrentUser;
 import cl.vicentepc.flashg7.views.login.LoginActivity;
 
+import static android.app.Activity.RESULT_OK;
+
 
 public class DrawerFragment extends Fragment implements PhotoCallback {
 
@@ -103,7 +105,7 @@ public class DrawerFragment extends Fragment implements PhotoCallback {
         super.onActivityResult(requestCode, resultCode, data);
         magicalCamera.resultPhoto(requestCode, resultCode, data);
 
-        if (Activity.RESULT_OK == resultCode) {
+        if (RESULT_OK == resultCode) {
 
             Bitmap photo = magicalCamera.getPhoto();
             String path = magicalCamera.savePhotoInMemoryDevice(photo,"avatar","flash", MagicalCamera.JPEG, true);
@@ -144,7 +146,6 @@ public class DrawerFragment extends Fragment implements PhotoCallback {
     private void setPhoto(String url) {
 
         Picasso.with(getContext()).load(url).centerCrop().fit().into(avatar);
-
 
     }
 

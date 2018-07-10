@@ -8,4 +8,11 @@
     tools:context=".views.main.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+    <fragment
+        tools:layout="@layout/fragment_chats"
+        android:id="@+id/chatsFragment"
+        android:name="cl.vicentepc.flashg7.chats.ChatsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </android.support.constraint.ConstraintLayout>

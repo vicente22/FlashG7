@@ -11,9 +11,11 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import cl.vicentepc.flashg7.data.CurrentUser;
+import cl.vicentepc.flashg7.data.EmailProcessor;
 import cl.vicentepc.flashg7.data.Nodes;
 import cl.vicentepc.flashg7.data.PhotoPreference;
 import cl.vicentepc.flashg7.models.LocalUser;
+
 
 public class UploadPhoto {
 
@@ -26,7 +28,7 @@ public class UploadPhoto {
     public void toFirebase(String path){
 
         final CurrentUser currentUser = new CurrentUser();
-        String folder = currentUser.sanitizedEmail(currentUser.email() + "/");
+        String folder = new EmailProcessor().sanitizedEmail(currentUser.email() + "/");
         String photoName = "avatar.jpeg";
         String baseUrl = "gs://flashg7-2458e.appspot.com/avatars/";
         String refUrl = baseUrl + folder + photoName;
@@ -45,13 +47,13 @@ public class UploadPhoto {
                 user.setName(currentUser.getCurrentUser().getDisplayName());
                 user.setPhoto(url);
                 user.setUid(currentUser.uid());
-                String key = currentUser.sanitizedEmail(currentUser.email());
+                String key = new EmailProcessor().sanitizedEmail(currentUser.email());
                 new Nodes().user(key).setValue(user);
                 FirebaseDatabase.getInstance().getReference().child("users").child(key).setValue(user);
 
             }
         });
 
-
     }
+
 }
